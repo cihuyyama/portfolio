@@ -12,7 +12,7 @@ function HeroSection() {
                 </div>
                 <div className='py-2 px-2 mt-4 mx-4 max-w-3xl'>
                     <p className='text-lg mt-4 mb-6 text-left '>
-                        Hello, I'm{" "}
+                        Hello, I&#39;m{" "}
                         <span className='font-semibold text-teal-600'>
                             Habib,{" "}
                         </span>
@@ -29,7 +29,7 @@ function HeroSection() {
                         <span className='font-semibold text-teal-600'>
                             smart contracts.{" "}
                         </span>
-                        My goal is to create software that not only simplifies tasks but also adds meaningful value to people's lives.
+                        My goal is to create software that not only simplifies tasks but also adds meaningful value to people&#39;s lives.
                     </p>
                     <Link
                     to='projects'
