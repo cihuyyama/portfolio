@@ -82,7 +82,7 @@ export default function Navbar() {
                             })}
                             <a href="https://github.com/cihuyyama" rel="noreferrer" target="_blank">
                                 <AiOutlineGithub
-                                    className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-900 dark:text-neutral-100"
+                                    className="md:mt-0 mt-5 hover:-translate-y-1 transition-transform cursor-pointer text-neutral-900 dark:text-neutral-100"
                                     size={30}
                                 />
                             </a>
