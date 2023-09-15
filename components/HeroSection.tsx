@@ -16,18 +16,18 @@ function HeroSection() {
                         <span className='font-semibold text-teal-600'>
                             Habib,{" "}
                         </span>
-                        an Informatics Student currently residing in Yogyakarta, Indonesia.
+                        an Informatics student currently residing in Yogyakarta, Indonesia.
                         My main area of expertise lies in{" "}
                         <span className='font-semibold text-teal-600'>
-                            web service{" "}
+                            Fullstack Engineering{" "}
                         </span>
-                        development, and also quite passionate about{" "}
+                        and also quite passionate about{" "}
                         <span className='font-semibold text-teal-600'>
-                            blockchain{" "}
+                        cloud services{" "}
                         </span>
-                        solutions and developing{" "}
+                         and {" "}
                         <span className='font-semibold text-teal-600'>
-                            smart contracts.{" "}
+                            cloud engineering   .{" "}
                         </span>
                         My goal is to create software that not only simplifies tasks but also adds meaningful value to people&#39;s lives.
                     </p>

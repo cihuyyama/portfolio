@@ -5,14 +5,18 @@ const skills = [
     {skill: "TypeScript"},
     {skill: "Node.Js"},
     {skill: "Next.Js"},
+    {skill: "Vue.Js"},
     {skill: "Tailwind CSS"},
-    {skill: "Git"},
     {skill: "MongoDB"},
+    {skill: "PostgreSQL"},
+    {skill: "Git"},
+    {skill: "AWS"},
+    {skill: "Docker"},
 ]
 
 function AboutSection() {
     return (
-        <section id='about'>
+        <section id='about' className='max-w-4xl mx-auto'>
             <div className='my-12 pb-12 md:pt-2 md:pb-48'>
                 <h1 className='text-center font-bold text-1xl'>
                     Technologies that i recently used :
