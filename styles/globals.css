@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased text-neutral-900 dark:text-neutral-100 transition-colors duration-300;
+  }
+
+  ::selection {
+    @apply bg-teal-600/20 text-teal-900 dark:text-teal-100;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
+}
+
+@layer components {
+  .section-heading {
+    @apply text-center font-bold text-3xl mb-8;
+  }
+
+  .badge {
+    @apply px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200;
+  }
+}

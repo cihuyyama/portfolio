@@ -1,78 +1,95 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
-import SlideUp from './SlideUp';
+import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
+import SlideUp from './SlideUp'
 
 const projects = [
     {
         name: "Netflix Clone",
-        description: "Web Streaming application offers similar functionality and UI to Netflix and was built using SWR React hooks library for data fetching and axios for http client.",
+        description: "A streaming web app with Netflix-like UI, built with SWR for data fetching and Axios as the HTTP client.",
         image: "/netflixclone.png",
         github: "https://github.com/cihuyyama/netflix-clone",
         link: "https://netflix-clone-cihuyyama.vercel.app/",
-        stack: ['Next Js', 'Tailwind CSS', 'Prisma', 'MongoDB']
+        stack: ["Next.js", "Tailwind CSS", "Prisma", "MongoDB"],
     },
     {
         name: "KopiSini POS",
-        description: "Web application system management Point-of-Sale for CoffeShop. Using online transaction to get the exact amount of the products.",
+        description: "A point-of-sale management system for coffee shops with online transaction tracking and product management.",
         image: "/kopsin.png",
         github: "https://github.com/cihuyyama/kopsin",
         link: "https://kopsin.000webhostapp.com/",
-        stack: ['Laravel', 'PHP', 'Bootstrap']
-    }
+        stack: ["Laravel", "PHP", "Bootstrap"],
+    },
 ]
 
 function ProjectsSection() {
     return (
-        <section id='projects'>
-            <h1 className='my-10 text-center font-bold text-2xl'>
+        <section id="projects" className="max-w-5xl mx-auto px-4">
+            <h2 className="py-10 text-center font-bold text-3xl">
                 Projects
-            </h1>
+            </h2>
 
-            <div className='flex flex-col space-y-28'>
-                {projects.map((project, idx) => {
-                    return (
-                        <div key={idx}>
-                            <SlideUp offset='-300px 0px -300px 0px'>
-                                <div className='flex flex-col animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12'>
-                                    <div className='mt-8 md:w-1/2 md:ml-8 mx-4'>
-                                        <Link href={project.link} target='_blank'>
-                                            <Image
-                                                src={project.image}
-                                                alt=""
-                                                width={1000}
-                                                height={1000}
-                                                className='rounded-xl shadow-xl hover:opacity-70'
+            <div className="flex flex-col space-y-20 pb-16">
+                {projects.map((project, idx) => (
+                    <div key={idx}>
+                        <SlideUp offset="-200px 0px -200px 0px">
+                            <div className="flex flex-col md:flex-row md:space-x-10 items-center">
+                                <div className="md:w-1/2">
+                                    <Link href={project.link} target="_blank">
+                                        <Image
+                                            src={project.image}
+                                            alt={`${project.name} screenshot`}
+                                            width={1000}
+                                            height={600}
+                                            className="rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+                                        />
+                                    </Link>
+                                </div>
+                                <div className="mt-6 md:mt-0 md:w-1/2">
+                                    <h3 className="text-2xl md:text-3xl font-bold mb-3">
+                                        {project.name}
+                                    </h3>
+                                    <p className="text-base leading-relaxed mb-4 text-neutral-600 dark:text-neutral-400">
+                                        {project.description}
+                                    </p>
+                                    <div className="flex flex-wrap gap-2 mb-5">
+                                        {project.stack.map((item, index) => (
+                                            <span
+                                                key={index}
+                                                className="text-xs font-semibold px-3 py-1 rounded-full bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300"
+                                            >
+                                                {item}
+                                            </span>
+                                        ))}
+                                    </div>
+                                    <div className="flex items-center space-x-4">
+                                        <Link
+                                            href={project.github}
+                                            target="_blank"
+                                            aria-label={`${project.name} source code`}
+                                        >
+                                            <BsGithub
+                                                size={24}
+                                                className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-700 dark:text-neutral-300 hover:text-teal-600 dark:hover:text-teal-400"
+                                            />
+                                        </Link>
+                                        <Link
+                                            href={project.link}
+                                            target="_blank"
+                                            aria-label={`${project.name} live demo`}
+                                        >
+                                            <BsArrowUpRightSquare
+                                                size={24}
+                                                className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-700 dark:text-neutral-300 hover:text-teal-600 dark:hover:text-teal-400"
                                             />
                                         </Link>
                                     </div>
-                                    <div className='mt-4 md:w-1/2 mx-4'>
-                                        <h1 className='text-4xl font-bold mb-6'>{project.name}</h1>
-                                        <p className='md:mr-12 text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400'>
-                                            {project.description}
-                                        </p>
-                                        <div className='flex flex-row align-bottom gap-4 my-5'>
-                                        {project.stack.map((item, index) => (
-                                            <div key={index} className='font-semibold text-teal-400'>
-                                                {item}
-                                            </div>
-                                        ))}
-                                        </div>
-                                        <div className='flex flex-row align-bottom space-x-4'>
-                                            <Link href={project.github} target="_blank">
-                                                <BsGithub size={30} className='hover:-translate-y-1 transition-transform cursor-pointer' />
-                                            </Link>
-                                            <Link href={project.link} target="_blank">
-                                                <BsArrowUpRightSquare size={30} className='hover:-translate-y-1 transition-transform cursor-pointer' />
-                                            </Link>
-                                        </div>
-                                    </div>
                                 </div>
-                            </SlideUp>
-                        </div>
-                    )
-                })}
+                            </div>
+                        </SlideUp>
+                    </div>
+                ))}
             </div>
         </section>
     )

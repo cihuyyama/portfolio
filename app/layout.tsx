@@ -12,18 +12,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
       <head />
-      <body className='dark:bg-gray-800'>
-        <ThemeProvider enableSystem={true} attribute='class'>
-        <Navbar />
-        {children}
-        <Footer/>
+      <body className="bg-white dark:bg-gray-900 min-h-screen flex flex-col">
+        <ThemeProvider enableSystem={true} attribute="class">
+          <Navbar />
+          <div className="flex-1 pt-16">
+            {children}
+          </div>
+          <Footer />
         </ThemeProvider>
-        <Analytics/>
+        <Analytics />
       </body>
     </html>
   )

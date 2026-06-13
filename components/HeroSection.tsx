@@ -5,37 +5,43 @@ import { Link } from 'react-scroll/modules'
 
 function HeroSection() {
     return (
-        <section id='home'>
-            <div className='flex flex-col text-center items-center justify-center my-10 py-16'>
-                <div className='mt-4'>
-                    <Image className='rounded-full shadow-2xl' src="/informal.jpg" alt='' width={250} height={250} />
+        <section id="home">
+            <div className="flex flex-col text-center items-center justify-center py-20 md:py-28 px-4">
+                <div className="relative">
+                    <Image
+                        className="rounded-full shadow-2xl ring-4 ring-teal-600/20"
+                        src="/informal.jpg"
+                        alt="Muhammad Iqbal Al Habib"
+                        width={200}
+                        height={200}
+                        priority
+                    />
                 </div>
-                <div className='py-2 px-2 mt-4 mx-4 max-w-3xl'>
-                    <p className='text-lg mt-4 mb-6 text-left '>
-                        Hello, I&#39;m{" "}
-                        <span className='font-semibold text-teal-600'>
-                            Habib,{" "}
+                <div className="mt-8 max-w-2xl">
+                    <h1 className="text-3xl md:text-4xl font-bold mb-4">
+                        Hi, I&apos;m{" "}
+                        <span className="text-teal-600 dark:text-teal-400">Habib</span>
+                    </h1>
+                    <p className="text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed mb-8">
+                        An Informatics student based in Yogyakarta, Indonesia.
+                        I specialize in{" "}
+                        <span className="font-semibold text-neutral-900 dark:text-neutral-100">
+                            Fullstack Engineering
                         </span>
-                        an Informatics student currently residing in Yogyakarta, Indonesia.
-                        My main area of expertise lies in{" "}
-                        <span className='font-semibold text-teal-600'>
-                            Fullstack Engineering{" "}
+                        {" "}and am passionate about{" "}
+                        <span className="font-semibold text-neutral-900 dark:text-neutral-100">
+                            cloud services
                         </span>
-                        and also quite passionate about{" "}
-                        <span className='font-semibold text-teal-600'>
-                        cloud services{" "}
-                        </span>
-                         and {" "}
-                        <span className='font-semibold text-teal-600'>
-                            cloud engineering   .{" "}
-                        </span>
-                        My goal is to create software that not only simplifies tasks but also adds meaningful value to people&#39;s lives.
+                        . My goal is to build software that simplifies tasks and adds meaningful value.
                     </p>
                     <Link
-                    to='projects'
-                    className='cursor-pointer text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:text-neutral-500'
+                        to="projects"
+                        smooth={true}
+                        duration={500}
+                        offset={-80}
+                        className="inline-block cursor-pointer text-white font-semibold px-8 py-3 bg-teal-600 hover:bg-teal-700 rounded-lg shadow-lg shadow-teal-600/25 hover:shadow-teal-600/40 transition-all duration-200 hover:-translate-y-0.5"
                     >
-                        Projects
+                        View Projects
                     </Link>
                 </div>
             </div>
