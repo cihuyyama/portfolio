@@ -32,6 +32,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# opencode runtime state
+.omo/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
