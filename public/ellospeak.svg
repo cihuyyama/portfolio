@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="elloBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c1917"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+    <pattern id="elloGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f59e0b" stroke-width="0.5" opacity="0.15"/>
+    </pattern>
+    <radialGradient id="elloGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#elloBg)"/>
+  <rect width="800" height="450" fill="url(#elloGrid)"/>
+  <circle cx="600" cy="200" r="180" fill="url(#elloGlow)"/>
+
+  <!-- Terminal header -->
+  <g font-family="ui-monospace, monospace">
+    <text x="40" y="60" font-size="12" fill="#fbbf24" opacity="0.7">~/ellospeak $</text>
+    <text x="40" y="90" font-size="24" font-weight="bold" fill="#fef3c7">ElloSpeak</text>
+    <text x="40" y="115" font-size="12" fill="#a8a29e">Online Mandarin tutoring · SSR SaaS · Calendar sync</text>
+  </g>
+
+  <!-- Chinese characters (Mandarin decorative) -->
+  <g font-family="serif" opacity="0.9">
+    <text x="480" y="180" font-size="72" font-weight="bold" fill="#fbbf24">你</text>
+    <text x="560" y="180" font-size="72" font-weight="bold" fill="#f59e0b" opacity="0.7">好</text>
+    <text x="480" y="260" font-size="36" fill="#fef3c7" opacity="0.6">n\u01d0 h\u01ceo</text>
+  </g>
+
+  <!-- Booking card mockup -->
+  <g transform="translate(60, 160)">
+    <rect width="340" height="220" rx="12" fill="#292524" stroke="#f59e0b" stroke-width="1" opacity="0.9"/>
+
+    <!-- Card header -->
+    <text x="20" y="35" font-family="ui-monospace, monospace" font-size="10" fill="#fbbf24" opacity="0.7">SESSION_BOOKING.tsx</text>
+
+    <!-- Time slots -->
+    <g font-family="ui-monospace, monospace" font-size="11">
+      <rect x="20" y="55" width="70" height="32" rx="6" fill="#78350f" opacity="0.5" stroke="#f59e0b"/>
+      <text x="55" y="76" text-anchor="middle" fill="#fef3c7">09:00</text>
+
+      <rect x="100" y="55" width="70" height="32" rx="6" fill="#f59e0b" opacity="0.9"/>
+      <text x="135" y="76" text-anchor="middle" fill="#1c1917" font-weight="bold">10:00</text>
+
+      <rect x="180" y="55" width="70" height="32" rx="6" fill="#78350f" opacity="0.5" stroke="#f59e0b"/>
+      <text x="215" y="76" text-anchor="middle" fill="#fef3c7">11:00</text>
+
+      <rect x="260" y="55" width="65" height="32" rx="6" fill="#292524" stroke="#57534e" stroke-dasharray="3 3"/>
+      <text x="292" y="76" text-anchor="middle" fill="#78716c">12:00</text>
+    </g>
+
+    <!-- Package selector -->
+    <g font-family="ui-monospace, monospace" font-size="10">
+      <text x="20" y="115" fill="#a8a29e">// package</text>
+      <rect x="20" y="125" width="140" height="28" rx="6" fill="#78350f" opacity="0.4" stroke="#f59e0b" stroke-width="1"/>
+      <text x="30" y="143" fill="#fef3c7">HSK 3 Prep</text>
+      <text x="140" y="143" fill="#fbbf24">→</text>
+
+      <rect x="170" y="125" width="155" height="28" rx="6" fill="#292524" stroke="#57534e"/>
+      <text x="180" y="143" fill="#a8a29e">Hanyu Huihua</text>
+    </g>
+
+    <!-- CTA -->
+    <rect x="20" y="170" width="150" height="34" rx="6" fill="#f59e0b"/>
+    <text x="95" y="192" text-anchor="middle" font-family="ui-monospace, monospace" font-size="12" font-weight="bold" fill="#1c1917">CONFIRM BOOKING →</text>
+
+    <!-- Google Calendar sync indicator -->
+    <g transform="translate(190, 175)" font-family="ui-monospace, monospace" font-size="10">
+      <circle cx="6" cy="12" r="4" fill="#22c55e"/>
+      <text x="18" y="16" fill="#a8a29e">Calendar synced</text>
+    </g>
+  </g>
+
+  <!-- Bottom terminal line -->
+  <g font-family="ui-monospace, monospace" font-size="10" fill="#fbbf24" opacity="0.5">
+    <text x="40" y="410">$ bun run dev --port 3000 --experimental-ssr</text>
+    <circle cx="360" cy="406" r="3" fill="#f59e0b">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

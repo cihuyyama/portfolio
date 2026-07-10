@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="wakasaBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#134e4a"/>
+    </linearGradient>
+    <pattern id="wakasaGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#14b8a6" stroke-width="0.5" opacity="0.15"/>
+    </pattern>
+    <filter id="wakasaGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="450" fill="url(#wakasaBg)"/>
+  <rect width="800" height="450" fill="url(#wakasaGrid)"/>
+
+  <!-- Warehouse rack silhouettes -->
+  <g opacity="0.6" stroke="#2dd4bf" stroke-width="1.5" fill="none">
+    <rect x="80" y="180" width="120" height="180" rx="2"/>
+    <line x1="80" y1="220" x2="200" y2="220"/>
+    <line x1="80" y1="270" x2="200" y2="270"/>
+    <line x1="80" y1="320" x2="200" y2="320"/>
+    <rect x="90" y="185" width="35" height="30" fill="#0d9488" opacity="0.6"/>
+    <rect x="130" y="185" width="30" height="30" fill="#14b8a6" opacity="0.4"/>
+    <rect x="90" y="225" width="45" height="40" fill="#2dd4bf" opacity="0.3"/>
+    <rect x="150" y="235" width="40" height="30" fill="#14b8a6" opacity="0.5"/>
+    <rect x="100" y="275" width="55" height="40" fill="#0d9488" opacity="0.4"/>
+
+    <rect x="230" y="180" width="120" height="180" rx="2"/>
+    <line x1="230" y1="220" x2="350" y2="220"/>
+    <line x1="230" y1="270" x2="350" y2="270"/>
+    <line x1="230" y1="320" x2="350" y2="320"/>
+    <rect x="240" y="185" width="40" height="30" fill="#14b8a6" opacity="0.4"/>
+    <rect x="290" y="185" width="45" height="30" fill="#0d9488" opacity="0.5"/>
+    <rect x="245" y="230" width="50" height="35" fill="#2dd4bf" opacity="0.3"/>
+    <rect x="240" y="275" width="60" height="40" fill="#14b8a6" opacity="0.4"/>
+  </g>
+
+  <!-- Barcode -->
+  <g transform="translate(430, 130)" fill="#2dd4bf">
+    <rect x="0" y="0" width="3" height="60"/>
+    <rect x="6" y="0" width="1" height="60"/>
+    <rect x="9" y="0" width="4" height="60"/>
+    <rect x="15" y="0" width="2" height="60"/>
+    <rect x="19" y="0" width="1" height="60"/>
+    <rect x="22" y="0" width="3" height="60"/>
+    <rect x="27" y="0" width="2" height="60"/>
+    <rect x="31" y="0" width="4" height="60"/>
+    <rect x="37" y="0" width="1" height="60"/>
+    <rect x="40" y="0" width="2" height="60"/>
+    <rect x="44" y="0" width="3" height="60"/>
+    <rect x="49" y="0" width="1" height="60"/>
+    <rect x="52" y="0" width="4" height="60"/>
+    <rect x="58" y="0" width="2" height="60"/>
+    <rect x="62" y="0" width="1" height="60"/>
+  </g>
+  <text x="430" y="212" font-family="ui-monospace, monospace" font-size="11" fill="#5eead4" opacity="0.8">WMS-8842-K</text>
+
+  <!-- Status pills -->
+  <g font-family="ui-monospace, monospace" font-size="11">
+    <rect x="430" y="240" width="90" height="24" rx="12" fill="#14b8a6" opacity="0.2" stroke="#14b8a6" stroke-width="1"/>
+    <text x="475" y="256" text-anchor="middle" fill="#5eead4">RECEIVING</text>
+
+    <rect x="530" y="240" width="80" height="24" rx="12" fill="#0d9488" opacity="0.2" stroke="#0d9488" stroke-width="1"/>
+    <text x="570" y="256" text-anchor="middle" fill="#5eead4">PICKING</text>
+
+    <rect x="430" y="274" width="70" height="24" rx="12" fill="#2dd4bf" opacity="0.15" stroke="#2dd4bf" stroke-width="1"/>
+    <text x="465" y="290" text-anchor="middle" fill="#5eead4">PACKING</text>
+
+    <rect x="510" y="274" width="90" height="24" rx="12" fill="#14b8a6" opacity="0.15" stroke="#14b8a6" stroke-width="1"/>
+    <text x="555" y="290" text-anchor="middle" fill="#5eead4">SHIPPING</text>
+  </g>
+
+  <!-- Terminal header -->
+  <g font-family="ui-monospace, monospace">
+    <text x="40" y="60" font-size="12" fill="#5eead4" opacity="0.7">~/wakasa-wms $</text>
+    <text x="40" y="90" font-size="24" font-weight="bold" fill="#e0f2f1">WAKASA WMS</text>
+    <text x="40" y="115" font-size="12" fill="#94a3b8">Warehouse fulfillment · 9-state tracking · ERP sync</text>
+  </g>
+
+  <!-- Bottom terminal line -->
+  <g font-family="ui-monospace, monospace" font-size="10" fill="#5eead4" opacity="0.5">
+    <text x="40" y="410">$ status --realtime | grep --live</text>
+    <circle cx="330" cy="406" r="3" fill="#14b8a6">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

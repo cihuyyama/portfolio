@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bibibBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#4c1d95"/>
+    </linearGradient>
+    <pattern id="bibibGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#a78bfa" stroke-width="0.5" opacity="0.15"/>
+    </pattern>
+    <radialGradient id="bibibGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bibibBg)"/>
+  <rect width="800" height="450" fill="url(#bibibGrid)"/>
+  <circle cx="200" cy="380" r="180" fill="url(#bibibGlow)"/>
+
+  <!-- Terminal header -->
+  <g font-family="ui-monospace, monospace">
+    <text x="40" y="60" font-size="12" fill="#c4b5fd" opacity="0.7">~/bibib-pos $</text>
+    <text x="40" y="90" font-size="24" font-weight="bold" fill="#ede9fe">BIBIB POS</text>
+    <text x="40" y="115" font-size="12" fill="#a1a1aa">Offline-first · Multi-role · Real-time sync</text>
+  </g>
+
+  <!-- Cashier UI mockup -->
+  <g transform="translate(60, 160)">
+    <!-- Receipt-style card -->
+    <rect width="320" height="240" rx="12" fill="#312e81" stroke="#a78bfa" stroke-width="1" opacity="0.9"/>
+
+    <text x="20" y="35" font-family="ui-monospace, monospace" font-size="10" fill="#c4b5fd" opacity="0.7">CART.tsx</text>
+
+    <!-- Cart items -->
+    <g font-family="ui-monospace, monospace" font-size="11">
+      <line x1="20" y1="50" x2="300" y2="50" stroke="#6d28d9" stroke-dasharray="2 3"/>
+
+      <text x="20" y="72" fill="#ede9fe">Benang Katun x12</text>
+      <text x="300" y="72" text-anchor="end" fill="#c4b5fd">Rp 45,000</text>
+
+      <text x="20" y="94" fill="#ede9fe">Jarum Jahit /pcs</text>
+      <text x="300" y="94" text-anchor="end" fill="#c4b5fd">Rp 8,000</text>
+
+      <text x="20" y="116" fill="#ede9fe">Resleting 20cm</text>
+      <text x="300" y="116" text-anchor="end" fill="#c4b5fd">Rp 12,500</text>
+
+      <line x1="20" y1="130" x2="300" y2="130" stroke="#6d28d9" stroke-dasharray="2 3"/>
+
+      <text x="20" y="152" fill="#c4b5fd" opacity="0.7">TOTAL</text>
+      <text x="300" y="152" text-anchor="end" fill="#ede9fe" font-weight="bold">Rp 65,500</text>
+    </g>
+
+    <!-- Payment buttons -->
+    <g font-family="ui-monospace, monospace" font-size="10">
+      <rect x="20" y="170" width="90" height="30" rx="6" fill="#4c1d95" stroke="#a78bfa" opacity="0.8"/>
+      <text x="65" y="189" text-anchor="middle" fill="#ede9fe">CASH</text>
+
+      <rect x="120" y="170" width="90" height="30" rx="6" fill="#4c1d95" stroke="#a78bfa" opacity="0.8"/>
+      <text x="165" y="189" text-anchor="middle" fill="#ede9fe">QRIS</text>
+
+      <rect x="220" y="170" width="90" height="30" rx="6" fill="#a78bfa"/>
+      <text x="265" y="189" text-anchor="middle" fill="#1e1b4b" font-weight="bold">CHARGE →</text>
+    </g>
+  </g>
+
+  <!-- Right side: sync indicator + stats -->
+  <g transform="translate(430, 160)">
+    <!-- Offline indicator -->
+    <rect width="310" height="70" rx="10" fill="#312e81" opacity="0.6" stroke="#a78bfa" stroke-width="1"/>
+    <circle cx="30" cy="35" r="6" fill="#22c55e">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="50" y="30" font-family="ui-monospace, monospace" font-size="12" fill="#ede9fe">OFFLINE MODE</text>
+    <text x="50" y="48" font-family="ui-monospace, monospace" font-size="10" fill="#c4b5fd" opacity="0.7">Queued: 3 transactions · Will sync when online</text>
+
+    <!-- Stats grid -->
+    <g transform="translate(0, 90)" font-family="ui-monospace, monospace">
+      <!-- Sales today -->
+      <rect width="145" height="65" rx="8" fill="#312e81" opacity="0.6" stroke="#6d28d9" stroke-width="1"/>
+      <text x="15" y="22" font-size="9" fill="#a78bfa">SALES TODAY</text>
+      <text x="15" y="46" font-size="18" font-weight="bold" fill="#ede9fe">Rp 1.2M</text>
+      <text x="118" y="46" font-size="11" fill="#22c55e">↑12%</text>
+
+      <!-- Transactions -->
+      <rect x="165" width="145" height="65" rx="8" fill="#312e81" opacity="0.6" stroke="#6d28d9" stroke-width="1"/>
+      <text x="180" y="22" font-size="9" fill="#a78bfa">TRANSACTIONS</text>
+      <text x="180" y="46" font-size="18" font-weight="bold" fill="#ede9fe">47</text>
+      <text x="278" y="46" font-size="11" fill="#22c55e">↑8</text>
+    </g>
+  </g>
+
+  <!-- Bottom terminal line -->
+  <g font-family="ui-monospace, monospace" font-size="10" fill="#c4b5fd" opacity="0.5">
+    <text x="40" y="415">$ docker compose up bibib-pos --detach</text>
+    <circle cx="320" cy="411" r="3" fill="#a78bfa">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
