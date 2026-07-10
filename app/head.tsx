@@ -21,7 +21,7 @@ export default function Head() {
         property="og:description"
         content="Full-Stack Engineer shipping production ERP, SaaS, and retail platforms. Yogyakarta, Indonesia."
       />
-      <meta property="og:image" content="/informal.jpg" />
+      <meta property="og:image" content="/profile.jpg" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -30,7 +30,7 @@ export default function Head() {
         name="twitter:description"
         content="Full-Stack Engineer shipping production ERP, SaaS, and retail platforms. Yogyakarta, Indonesia."
       />
-      <meta name="twitter:image" content="/informal.jpg" />
+      <meta name="twitter:image" content="/profile.jpg" />
 
       <link rel="icon" href="/favicon.ico" />
     </>

@@ -110,9 +110,9 @@ function HeroSection() {
             aria-hidden
             className="absolute inset-0 rounded-full bg-teal-500/20 blur-2xl scale-110"
           />
-          <Image
+            <Image
             className="relative rounded-full shadow-2xl ring-4 ring-teal-600/20 dark:ring-teal-400/20"
-            src="/informal.jpg"
+            src="/profile.jpg"
             alt="Muhammad Iqbal Al Habib"
             width={180}
             height={180}
