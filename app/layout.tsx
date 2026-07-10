@@ -13,7 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body className="bg-white dark:bg-gray-900 min-h-screen flex flex-col">
+      <body className="bg-white dark:bg-zinc-950 min-h-screen flex flex-col">
         <ThemeProvider enableSystem={true} attribute="class">
           <Navbar />
           <div className="flex-1 pt-16">

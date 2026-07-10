@@ -3,15 +3,16 @@
 ## Commands
 
 - **Dev server**: `npm run dev` (Next.js on localhost:3000)
-- **Build**: `npm run build` (static export to `build/`)
+- **Build**: `npm run build` (Next.js production build to `.next/`)
 - **Lint**: `npm run lint` (ESLint with next/core-web-vitals)
 - **Start**: `npm run start` (serve production build)
 
 ## Stack
 
-- Next.js 13 (App Router, static export)
+- Next.js 13 (App Router) — deployed on Vercel (serverless)
 - React 18 + TypeScript 4.9
 - Tailwind CSS 3 (dark mode via class strategy)
+- Framer Motion 11 + GSAP 3 (@gsap/react)
 - PostCSS + Autoprefixer
 - Impeccable (design polish skill)
 
@@ -36,7 +37,7 @@
 
 - Path alias: `@/*` maps to project root
 - Dark mode: Tailwind `class` strategy (toggled via `next-themes`)
-- Output: Static HTML export (`output: 'out'`, `distDir: 'build'`)
+- Deployment: Vercel serverless (default Next.js hosting)
 - ESLint: `next/core-web-vitals` preset
 - All interactive elements must have `aria-label` and focus ring
 - Hover states use `transition-colors duration-200` or `transition-transform`
@@ -44,5 +45,5 @@
 ## Notes
 
 - No test framework configured — add Vitest or Jest when needed
-- No package lock file present — run `npm install` to generate one
-- Static export mode — no server-side features (API routes, SSR, ISR) available
+- `package-lock.json` is gitignored — Vercel installs fresh via `packageManager: yarn@1.22.22`
+- `@vercel/analytics` enabled in `app/layout.tsx`

@@ -13,6 +13,7 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
     { label: "Home", page: "home" },
+    { label: "About", page: "about" },
     { label: "Projects", page: "projects" },
 ]
 
@@ -22,7 +23,7 @@ export default function Navbar() {
     const [navbar, setNavbar] = useState(false)
 
     return (
-        <header className="w-full mx-auto px-4 sm:px-20 fixed top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-700">
+        <header className="w-full mx-auto px-4 sm:px-20 fixed top-0 z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800">
             <div className="justify-between md:items-center md:flex">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-4 md:block">
