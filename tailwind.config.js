@@ -3,9 +3,22 @@ module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./data/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
+      fontFamily: {
+        mono: [
+          'ui-monospace',
+          'SFMono-Regular',
+          'Menlo',
+          'Monaco',
+          'Consolas',
+          '"Liberation Mono"',
+          '"Courier New"',
+          'monospace',
+        ],
+      },
       colors: {
         brand: {
           50: '#f0fdfa',
@@ -18,15 +31,6 @@ module.exports = {
           700: '#0f766e',
           800: '#115e59',
           900: '#134e4a',
-        },
-      },
-      animation: {
-        slideUpCubiBezier: "slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
-      },
-      keyframes: {
-        slideUp: {
-          from: { transform: "translateY(40px)", opacity: "0" },
-          to: { transform: "translateY(0)", opacity: "1" },
         },
       },
     },

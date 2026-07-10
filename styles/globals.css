@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply antialiased text-neutral-900 dark:text-neutral-100 transition-colors duration-300;
+    @apply antialiased text-neutral-900 dark:text-neutral-100 bg-white dark:bg-zinc-950 transition-colors duration-300;
   }
 
   ::selection {
@@ -17,6 +17,11 @@
 
   h1, h2, h3, h4, h5, h6 {
     @apply tracking-tight;
+  }
+
+  /* Custom focus ring for accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-teal-500/50 ring-offset-2 ring-offset-white dark:ring-offset-zinc-950 rounded;
   }
 }
 
@@ -27,5 +32,17 @@
 
   .badge {
     @apply px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200;
+  }
+
+  /* Terminal-style eyebrow */
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.3em] text-teal-600 dark:text-teal-400;
+  }
+}
+
+@layer utilities {
+  /* Fine-grained mono chip for tech stack tags */
+  .chip-mono {
+    @apply font-mono text-[11px] px-2 py-1 rounded-md border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900/80 text-neutral-600 dark:text-neutral-400;
   }
 }
